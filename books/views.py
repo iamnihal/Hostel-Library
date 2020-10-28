@@ -14,6 +14,7 @@ def index(request):
 def about(request):
     return render(request, 'books/about.html')
 
+
 class PostDetailView(DetailView):
     model = Post
     

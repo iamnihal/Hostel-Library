@@ -3,7 +3,7 @@ from django.utils import timezone
 from django.core.validators import RegexValidator
 from django.contrib.auth.models import User
 from PIL import Image
-from django.urls import reverse
+from django.urls import reverse #For get_absolute_url()
 
 class Post(models.Model):
     book_name = models.CharField(max_length=35)

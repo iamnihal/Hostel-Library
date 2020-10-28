@@ -22,6 +22,7 @@ from users import views as user_views
 
 urlpatterns = [
     path('', include('books.urls')),
+    path('author/<int:pk>/', user_views.author, name='author-detail'),
     path('register/', user_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('profile/', user_views.profile, name='profile'),

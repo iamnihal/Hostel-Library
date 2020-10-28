@@ -97,7 +97,7 @@
                 <img class="rounded-circle img-thumbnail top1" src="{{ post.author.profile.image.url }}">
             </div> -->
             <small class="text-muted">Posted By</small>
-            <a class="text-uppercase" href="#"><p class="text-uppercase">{{ post.author }}</p></a>
+            <a class="text-uppercase" href="{% url 'author-detail' post.author.id %}"><p class="text-uppercase">{{ post.author }}</p></a>
           </div>
         </div>
       </div>
