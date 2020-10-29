@@ -18,18 +18,19 @@
   <!-- Custom styles for this template -->
   <link href="{% static 'books/heroic-features.css' %}" rel="stylesheet">
 
-</head>
 <style>
     body {
         background-color: #D8DEE9;
         }
 </style>
+</head>
+
 <body style=margin-bottom:50px;>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="{% url 'index' %}">Hostel Library</a>
+      <a class="navbar-brand" href="{% url 'index' %}">Hostel Library  </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -49,40 +50,30 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'register' %}">Register</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'book-request' %}">Request Book</a>
-          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  
   <!-- Page Content -->
   <div class="container">
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }} text-center">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endif %}
+
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
             <div class="content-section">
-                <form method="POST">
+                <form action="{% url 'book-request' %}" method="POST">
                     {% csrf_token %}
                     <fieldset class="form-group">
-                        <legend class="border-bottom mb-4">Log In</legend>
+                        <legend class="border-bottom mb-4">Request Book</legend>
                         {{ form|crispy }}
                     </fieldset>
                     <div class="form-group">
-                        <button class="btn btn-outline-info" type="submit">Login</button>
+                        <button class="btn btn-outline-info" type="submit">Submit</button>
                     </div>
                 </form>
                 <div class="border-top pt-3">
                     <small class="text-muted">
-                        Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
+                        Want to see the list of requested Books before posting? <a class="ml-2" href="{% url 'requested-books' %}">Book List</a>
                     </small>
                 </div>
             </div>
@@ -103,8 +94,8 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'books/jquery.min.js' %}"></script>
+  <script src="{% static 'books/bootstrap.bundle.min.js' %}"></script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
