@@ -6,6 +6,7 @@
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="{% static 'books/favicon.ico' %}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -80,10 +81,11 @@
                         <span style="white-space: nowrap">Sem</span>
                     </p>
                     <p><strong>Contact:- {{ book.contact_number }}</strong></p>
+                    <small class="text-muted">Posted By</small>
+                    <p class="text-uppercase">{{ book.student_name }}</p>
                     <small class="text-muted">{{ book.date_posted|date:"F d, Y" }}</small>
                   </div>
                 </div>
-                
               </div>
             {% endfor %}
         </div>
