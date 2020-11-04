@@ -1,7 +1,7 @@
 # Hostel-Library 📚
 Hostel Library is a Web App developed using Django Framework (v3.1.2)
 
-![](https://media.giphy.com/media/76SvbszEVXSaZS11EH/giphy.gif)
+![Hostel-Library Demo](https://raw.githubusercontent.com/iamnihal/Hostel-Library/main/app.gif)
 
 ## 📖 Installation
 To start, clone the repo to your local computer and change into the proper directory.
