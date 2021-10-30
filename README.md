@@ -18,4 +18,4 @@ $ source Hostel-Library/bin/activate
 # Load the site at http://127.0.0.1:8000
 ```
 ## 💻 Demo
-http://dbit.pythonanywhere.com
+https://dbit.pythonanywhere.com
